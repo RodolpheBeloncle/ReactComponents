@@ -10,8 +10,8 @@ const StarRange = ({gameValue}) => {
         
       <>
        
-          <Stack spacing={1}>
-            <Rating name="half-rating-read" defaultValue={gameValue} precision={0.5} readOnly />
+          <Stack  spacing={1}>
+            <Rating  name="half-rating-read" defaultValue={gameValue} precision={0.5} readOnly />
           </Stack>
        
       </>

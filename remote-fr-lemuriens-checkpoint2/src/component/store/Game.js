@@ -8,6 +8,8 @@ import {useCart} from '../../hooks/useCart';
 const Game = ({details}) => {
 
     const { addGame,cartItems,removeGame} = useCart();
+    const [favoriteColor,setFavoriteColor] = useState("text-gray-200")
+
 
     // Check If game is in the shopping List
 
@@ -15,28 +17,24 @@ const Game = ({details}) => {
         return !!cartItems.find(item => item.id === details.id);
     }
 
-    const [favoriteColor,setFavoriteColor] = useState("text-white")// text-red-600
-
+  
     const handleClickFavorite = () => {
-        setFavoriteColor(favoriteColor === "text-white" ? "text-red-600" : "text-white");
+        setFavoriteColor(favoriteColor === "text-gray-200" ? "text-red-200" : "text-gray-200");
       };
 
     return (
         //  == Card game ==
-        <li className="max-w-xs h-64 flex flex-col justify-between bg-white dark:bg-gray-800 rounded-lg border border-gray-400 mb-6 py-5 px-4">
-            <img className="w-full"  
-            src={details.background_image} alt=""/>
-            <div className="m-full h-32 sm:h-48 object-cover ">
-
-                <span className="font-bold">
+        <li className="justify-center max-w-xs h-64 flex flex-col  bg-white dark:bg-gray-800 rounded-xl border border-gray-400 mb-6  m-5">
+            <div>
+                <img className="h-48 w-full object-cover md:h-full md:w-48 rounded-xl"  
+                src={details.background_image} alt=""/>
+            </div>
+            <div className="m-full sm:h-48 object-cover ">
+                <span className="font-bold ">
                 {details.name}
                 </span>
-
-                <div className=" flex flex-col justify-center block text-gray-500 text-sm  px-1">
-                rating 
-                <StarRange gameValue={details.rating}/>
-                </div>
-                
+               
+               <div>
                 {
                     isInCart(details) && 
                     <FavoriteIcon
@@ -60,14 +58,17 @@ const Game = ({details}) => {
                      
                     />
                 }
+                </div>
+                
+                <div className="flex flex-col justify-center block  text-sm  px-1  w-24  md:w-auto text-gray-500">
               
-
+                Rating 
+                <StarRange className="mx-8 " gameValue={details.rating}/>
+                </div>
                 
-
-                
-              
-                
-            </div>
+                </div>
+             
+           
         </li>
     );
 };
