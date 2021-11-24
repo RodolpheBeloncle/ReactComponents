@@ -1,8 +1,8 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 import App from './App';
-import GamesContextProvider from "./Context/GamesContext";
-import CartGameContextProvider from "./Context/CardGameContext";
+import GamesContextProvider from "./context/GamesContext";
+import CartGameContextProvider from "./context/CardGameContext";
 
 ReactDOM.render(
   <React.StrictMode>

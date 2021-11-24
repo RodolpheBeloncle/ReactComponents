@@ -1,7 +1,6 @@
-import Header from "./Header";
+import Header from "./component/Header";
 import {BrowserRouter as Router, Routes, Route} from "react-router-dom"
 import GameList from "./component/store/GameList";
-// import Home from "./Home";
 import "tailwindcss/tailwind.css"
 import CartShopGame from "./component/cart/CartShopGame"
 
