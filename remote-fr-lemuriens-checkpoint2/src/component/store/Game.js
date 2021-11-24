@@ -24,17 +24,18 @@ const Game = ({details}) => {
 
     return (
         //  == Card game ==
-        <li className="justify-center max-w-xs h-64 flex flex-col  bg-white dark:bg-gray-800 rounded-xl border border-gray-400 mb-6  m-5">
+        <li className="justify-center  w-30 mt-10 m-auto py-1 px-2 lg:mt-16 max-w-sm bg-white dark:bg-gray-800 rounded-xl border border-gray-400 mb-6  m-5 shadow-2xl">
             <div>
-                <img className="h-48 w-full object-cover md:h-full md:w-48 rounded-xl"  
+                <img className="w-80 mt-24 m-auto lg:mt-16 max-w-sm rounded-xl"  
                 src={details.background_image} alt=""/>
             </div>
-            <div className="m-full sm:h-48 object-cover ">
+
+            <div className="mx-20 m-full sm:h-48 object-cover my-10">
                 <span className="font-bold ">
                 {details.name}
                 </span>
                
-               <div>
+               <div className="my-4">
                 {
                     isInCart(details) && 
                     <FavoriteIcon
@@ -66,7 +67,7 @@ const Game = ({details}) => {
                 <StarRange className="mx-8 " gameValue={details.rating}/>
                 </div>
                 
-                </div>
+            </div>
              
            
         </li>

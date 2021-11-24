@@ -9,10 +9,10 @@ import { useProducts } from '../../hooks/useProducts'
 
 const GameList = () => {
    const initialState = {
-       unFiltered:"unfiltered"
+       unFiltered:"Unfiltered"
    }
    const newState = {
-       filtered:"filtered"
+       filtered:"Filtered"
 
 
    }
@@ -45,8 +45,9 @@ const GameList = () => {
     
     return (
         <>
-        <h1>{dataGames.length} Games Available</h1>
-        <p>{filterTitle}</p>
+        <div className="text-center container my-12 mx-auto bg-green-100 rounded-xl">
+        <h1 className="font-mono p-4">{dataGames.length} Games Available</h1>
+        <p className="font-mono p-4">{filterTitle}</p>
 
         <button 
                 type="button" 
@@ -66,8 +67,9 @@ const GameList = () => {
                 
                 
                 </button>
+            </div>
 
-        <ul className= "grid grid-cols-1 md:grid-cols-6">
+        <ul className= "p-1 grid grid-cols-1 sm:grid-cols-1 md:grid-cols-3 lg:grid-cols-3 xl:grid-cols-3 gap-5">
 
         {dataGames.map((game)=> 
             <Game key={game.id} details={game}/>

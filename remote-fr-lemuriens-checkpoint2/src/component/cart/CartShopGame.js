@@ -7,7 +7,7 @@ const CartShopGame = () => {
     const {cartItems} = useCart();
   
     return (
-        <div>
+        <div className="grid grid-cols-1">
             {
                 cartItems.map(game=> 
                     <CartGame

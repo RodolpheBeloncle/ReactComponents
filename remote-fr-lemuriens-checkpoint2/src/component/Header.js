@@ -7,7 +7,7 @@ const Header = ({name}) => {
   
     return (
         <>
-        <div>
+        <div className="text-center text-gray-800 text-2xl font-bold pt-6">
             Welcome to {name}
 
 
@@ -15,17 +15,20 @@ const Header = ({name}) => {
             
         </div>
 
-        <ul>
-            <li>
+        <nav className="hidden md:flex items-center space-x-1">
+
+            <ul className="hidden md:flex items-center space-x-1">
+
+            <li className="py-2 px-2 font-medium text-gray-500 rounded hover:bg-green-500 hover:text-white transition duration-300">
             <Link to='/Cart'> Favorite list ({cartItems.length})</Link>
 
             </li>
             <li>
-            <Link to={"/Games"}><h1 className="text-4xl">Store Games</h1></Link> 
+            <Link to={"/Games"}><h1 className="py-2 px-2 font-medium text-white bg-green-500 rounded hover:bg-green-400 transition duration-300">Stored Games</h1></Link> 
 
             </li>
-        
-        </ul>
+            </ul>
+        </nav>
         
         </>
     );
