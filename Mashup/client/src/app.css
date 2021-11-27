@@ -1,0 +1,22 @@
+.body{
+    padding: 0;
+    margin: 0;
+}
+
+.root{
+    padding: 0;
+    margin:0;
+}
+
+.home{
+    padding: 0 0 0 0 ;
+    margin: 0 0 0 0 ;
+    width: 100%;
+}
+
+
+.container__playList{
+    display: flex;
+    justify-content: center;
+    flex-direction: row;
+}

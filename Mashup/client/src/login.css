@@ -1,0 +1,118 @@
+.container__home {
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: 1fr 1fr 1fr;
+  width: 100vw;
+  height: 100vh;
+  background: url(./assets/liquid-cheese.svg);
+  background-color: rgba(255, 208, 0, 0.7);
+  background-repeat: no-repeat;
+  background-size: 350%;
+  background-position: top 150px center;
+}
+.container__playlist {
+  display: flex;
+  flex-direction: column;
+  padding-top: 0.5;
+  padding-bottom: 0.5;
+}
+
+@media screen and (min-width: 767px) {
+  .container__home {
+    background-size: cover;
+  }
+  .formContent {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  label {
+    margin-right: 20px;
+    font-weight: bold;
+    font-size: 20px;
+  }
+  .button__enterplay {
+    display: flex;
+    flex-direction: column;
+  }
+}
+
+label {
+  margin-right: 20px;
+  font-weight: bold;
+  font-size: 20px;
+}
+
+label {
+  margin-right: 20px;
+  font-weight: bold;
+  font-size: 20px;
+  color: #ebdbba;
+  margin-left: 15px;
+}
+input {
+  margin-right: 15px;
+  border-radius: 5px;
+  border: rgba(255, 208, 0, 0.7);
+}
+
+.text_explain {
+  margin-top: -20px;
+  grid-row: 1;
+  display: flex;
+  justify-content: center;
+  align-content: center;
+  margin: 20px;
+  opacity: 1.5;
+  background-color: #664e3f;
+  width: auto;
+  height: auto;
+  font-family: "Avenir Next", "Avenir", sans-serif;
+
+  border-radius: 5px;
+}
+.text_explain_h2 {
+  display: flex;
+  text-align: center;
+  color: #ebdbba;
+  justify-content: center;
+  align-items: center;
+  font-family: "Avenir Next", "Avenir", sans-serif;
+  font-size: 1.5em;
+  padding: 5px;
+}
+
+.button__enterplay {
+  grid-row: 3;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 20px;
+  margin-top: 20px;
+  flex-direction: column;
+}
+
+.fond {
+  background-color: rgba(218, 80, 52, 0.7);
+  border-radius: 5px;
+  padding: 10px;
+}
+
+.button__enterplay {
+  grid-row: 3;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 20px;
+  margin-top: 20px;
+}
+
+.fond {
+  background-color: rgba(218, 80, 52, 0.7);
+  border-radius: 5px;
+  padding: 10px;
+}
+
+.btn-warning:hover {
+  background-color: #da5034;
+}
